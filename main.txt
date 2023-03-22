@@ -1,0 +1,105 @@
+<section class="section doctor-single">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-4 col-md-6">
+				<div class="doctor-img-block">
+					
+					<img src="/uploads/<%-displayData[0].doc_image%>" alt="" class="img-fluid w-100">
+
+					<div class="info-block mt-4">
+						
+						<h4 class="mb-0"><%-displayData[0].doc_name%></h4>
+						<p><%-displayData[0].doc_dept.dept_name%></p>
+
+						<ul class="list-inline mt-4 doctor-social-links">
+							<li class="list-inline-item"><a href="#!"><i class="icofont-facebook"></i></a></li>
+							<li class="list-inline-item"><a href="#!"><i class="icofont-twitter"></i></a></li>
+							<li class="list-inline-item"><a href="#!"><i class="icofont-skype"></i></a></li>
+							<li class="list-inline-item"><a href="#!"><i class="icofont-linkedin"></i></a></li>
+							<li class="list-inline-item"><a href="#!"><i class="icofont-pinterest"></i></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-lg-8 col-md-6">
+				<div class="doctor-details mt-4 mt-lg-0">
+					<h2 class="text-md">Introducing to myself</h2>
+					<div class="divider my-4"></div>
+					<p><%-displayData[0].doc_description%></p>
+					
+					<a href="appoinment.html" class="btn btn-main-2 btn-round-full mt-3">Make an Appoinment<i
+							class="icofont-simple-right ml-2  "></i></a>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="section doctor-qualification gray-bg">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-6">
+				<div class="section-title">
+					<h3>My Educational Qualifications</h3>
+					<div class="divider my-4"></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-lg-6 mb-4 mb-lg-0">
+				<div class="edu-block mb-5">
+					
+					<h4 class="mb-3 title-color"><%-displayData[0].doc_q1%></h4>
+					
+				</div>
+
+				<div class="edu-block">
+					
+					<h4 class="mb-3 title-color"><%-displayData[0].doc_q2%></h4>
+					
+				</div>
+			</div>
+
+			<div class="col-lg-6">
+				<div class="edu-block mb-5">
+					
+					<h4 class="mb-3 title-color"><%-displayData[0].doc_q3%></h4>
+					
+				</div>
+
+				<div class="edu-block">
+					
+					<h4 class="mb-3 title-color"><%-displayData[0].doc_q4%></h4>
+					
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+
+about-2.ejs
+department
+<div class="col-lg-6">
+                            <div class="form-group">
+                                <select class="form-control" id="exampleFormControlSelect1" name="app_departments">
+                                       
+
+                                  <option>Choose Department</option>
+                                  <% if(doctorData.length > 0){%>
+                                <% for(let department of doctorData){%> 
+
+                                  <option value="<%=department.doc_dept.dept_name %>"><%=department.doc_dept.dept_name %></option>
+                                  <!-- <option value="Cardiology">Cardiology</option>
+                                  <option value="Dental Care">Dental Care</option>
+                                  <option value="Child Care">Child Care</option>
+                                  <option value="Pulmology">Pulmology</option>
+                                  <option value="Gynecology">Gynecology</option> -->
+                                  <% }} %>
+
+                                </select>
+                            </div>
+                        </div>

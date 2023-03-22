@@ -1,0 +1,104 @@
+<%-include("./common/head")%>
+    <!-- Page Content  -->
+    <div id="content" class="p-4 p-md-5 pt-5">
+        <% if (message.length> 0) { %>
+        <div class="alert alert-info">
+          <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+          <strong>
+            <%= message %>
+          </strong>
+        </div>
+      <% } %>
+        <h2 class="mb-4"><%=title%></h2>
+        <p>Welcome to <%=title%> Page</p>
+        <h3>
+            <%=data.name%>
+        </h3>
+        
+
+
+
+
+
+        <div id="content-wrapper" class="d-flex flex-column">
+
+          <!-- Main Content -->
+          <div id="content">
+
+                  <!-- Begin Page Content -->
+                  <div class="container-fluid">
+
+                      <!-- Page Heading -->
+                      <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                          <h1 class="h3 mb-0 text-gray-800">All Posts</h1>
+                      </div>
+                      <div class="card shadow mb-4">
+                          <div class="card-header py-3">
+                              <h6 class="m-0 font-weight-bold text-primary">All Writer's Posts</h6>
+                          </div>
+                          <div class="card-body">
+                              <div class="table-responsive">
+                                  <table class="table table-bordered" id="myTable" width="100%" cellspacing="0">
+                                      <thead>
+                                          <tr>
+                                              <th>Date</th>
+                                              <th>Title</th>
+                                              <th>Sub Title</th>
+                                              <th>Content</th>
+                                              <th>Writer</th>
+                                              <th>Email</th>
+                                              <th>Operation</th>
+                                          </tr>
+                                      </thead>
+                                      <tbody>
+                                          <% if(displayData.length> 0) {
+                                              for(data of displayData) {
+                                              %>
+                                              <tr>
+                                                  <td>
+                                                <%- data.createdAt.toDateString() %>
+                                                  </td>
+                                                  <td>
+                                                      <%- data.title %>
+                                                  </td>
+                                                  <td>
+                                                      <%- data.subtitle %>
+                                                  </td>
+                                                  <td>
+                                                      <%- data.content %>
+                                                  </td>
+                                                  <td>
+                                                      <%- data.user.name%>
+                                                  </td>
+                                                  <td>
+                                                      <%- data.user.email %>
+                                                  </td>
+                                                  
+                                                  <% if(data.status) {%>
+                                                      <td>
+                                                          <a href=" deactivepost/<%- data._id %>" class="btn
+                                                          btn-danger">Deactive</a>
+                                                  </td>
+                                                  <% } else{%>
+                                                      <td>
+                                                          <a href="activepost/<%- data._id %>"
+                                                              class="btn btn-success">Active</a>
+                                                      </td>
+                                                      <% } %>
+                                              </tr>
+                                              <% } } %>
+                                  </table>
+                              </div>
+                          </div>
+                      </div>
+
+                  </div>
+                  <!-- End Begin Page Content -->
+          </div>
+          <!-- End of Main Content -->
+
+
+
+    </div>
+
+    <%-include("./common/footer")%>

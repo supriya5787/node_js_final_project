@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- basic -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- mobile metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <!-- site metas -->
+    <title>Covido</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- style css -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Responsive-->
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- fevicon -->
+    <link rel="icon" href="images/fevicon.png" type="image/gif" />
+    <!-- Scrollbar Custom CSS -->
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css"
+        media="screen">
+    <link rel="stylesheet" href="https://rawgit.com/LeshikJanz/libraries/master/Bootstrap/baguetteBox.min.css">
+</head>
+
+<body>
+    <section class="vh-100" style="background-color: #508bfc;">
+        <div class="container py-5 h-100">
+            <div class="row d-flex justify-content-center align-items-center h-100">
+                <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+                    <!-- <h1 class="m-2 text-white"><a class="text-white" href="/">
+                            < Home</a>
+                    </h1> -->
+                    <div class="card shadow-2-strong" style="border-radius: 1rem;">
+                        <div class="card-body p-5 text-center">
+
+                            <% if (message.length> 0) { %>
+                                <div class="alert alert-danger">
+                                    <span class="closebtn"
+                                        onclick="this.parentElement.style.display='none';">&times;</span>
+                                    <strong>
+                                        <%= message %>
+                                    </strong>
+                                </div>
+                                <% } %>
+
+                                    <h3 class="mb-5">Sign In</h3>
+
+                                    <form action="/admin/adminSignin" method="post">
+                                        <div class="form-outline mb-4">
+                                            <label class="form-label" for="typeEmailX-2">Email</label>
+                                            <input type="email" name="email" id="typeEmailX-2"
+                                                class="form-control form-control-lg" />
+                                        </div>
+
+                                        <div class="form-outline mb-4">
+                                            <label class="form-label" for="typePasswordX-2">Password</label>
+                                            <input type="password" name="password"
+                                                id="typePasswordX-2" class="form-control form-control-lg" />
+                                        </div>
+
+                                        <!-- Checkbox -->
+                                        <!-- <div class="form-check d-flex justify-content-start mb-4">
+                                            <input class="form-check-input" type="checkbox" name="rememberme"
+                                                id="form1Example3" />
+                                            <label class="form-check-label" for="form1Example3"> Remember Me </label>
+                                        </div> -->
+
+                                        <button class="btn btn-primary btn-lg btn-block" type="submit">Sign In</button>
+                                        <!-- <div class="mt-2">
+                                            <p class="mb-0">Don't have an account? <a href="signup"
+                                                    class="text-dark-50 fw-bold">Sign Up</a>
+                                            </p>
+                                        </div> -->
+
+                                    </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

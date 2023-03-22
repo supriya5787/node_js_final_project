@@ -1,0 +1,397 @@
+user/partials/blocks/doctor.ejs
+
+
+<!-- portfolio -->
+<section class="section doctors">
+  <div class="container">
+  	  <div class="row justify-content-center">
+             <div class="col-lg-6 text-center">
+                <div class="section-title">
+                    <h2>Doctors</h2>
+                    <div class="divider mx-auto my-4"></div>
+                    <p>We provide a wide range of creative services adipisicing elit. Autem maxime rem modi eaque, voluptate. Beatae officiis neque </p>
+                </div>
+            </div>
+        </div>
+
+      <div class="col-12 text-center  mb-5">
+	        <div class="btn-group btn-group-toggle " data-toggle="buttons">
+
+	          <label class="btn active ">
+	            <input type="radio" name="shuffle-filter" value="all" checked="checked" />All Department
+	          </label>
+
+
+	          <label class="btn ">
+	            <input type="radio" name="shuffle-filter" value="cat1" />Cardiology
+	          </label>
+			  
+
+	          <label class="btn">
+	            <input type="radio" name="shuffle-filter" value="cat2" />Dental
+	          </label>
+
+	          <label class="btn">
+	            <input type="radio" name="shuffle-filter" value="cat3" />Neurology
+	          </label>
+
+	          <label class="btn">
+	            <input type="radio" name="shuffle-filter" value="cat4" />Medicine
+	          </label>
+
+	           <label class="btn">
+	            <input type="radio" name="shuffle-filter" value="cat5" />Pediatric
+	          </label>
+
+	          <label class="btn">
+	            <input type="radio" name="shuffle-filter" value="cat6" />Traumatology
+	          </label>
+
+	        </div>
+      </div>
+
+
+	  <% for(showDoctor of displayData) { %>
+    <div class="row shuffle-wrapper portfolio-gallery">
+
+
+      	<div class="col-lg-3 col-sm-6 col-md-6 mb-4 shuffle-item" data-groups="[&	 quot;cat1&quot;,&quot;cat2&quot;]">
+	      	<div class="position-relative doctor-inner-box">
+		        <div class="doctor-profile">
+	               <div class="doctor-img">
+	               		<img src="images/team/1.jpg" alt="doctor-image" class="img-fluid w-100">
+	               </div>
+	            </div>
+                <div class="content mt-3">
+                	<h4 class="mb-0"><a href="doctor-single.html">Thomas Henry</a></h4>
+                	<p>Cardiology</p>
+                </div> 
+	      	</div>
+      	</div>
+
+      <div class="col-lg-3 col-sm-6 col-md-6 mb-4 shuffle-item" data-groups="[&quot;cat2&quot;]">
+        	<div class="position-relative doctor-inner-box">
+		        <div class="doctor-profile">
+		        	<div class="doctor-img">
+		               <img src="images/team/2.jpg" alt="doctor-image" class="img-fluid w-100">
+		            </div>
+	            </div>
+                <div class="content mt-3">
+                	<h4 class="mb-0"><a href="doctor-single.html">Harrision Samuel</a></h4>
+                	<p>Radiology</p>
+                </div> 
+	      	</div>
+      </div>
+
+      <div class="col-lg-3 col-sm-6 col-md-6 mb-4 shuffle-item" data-groups="[&quot;cat3&quot;]">
+        	<div class="position-relative doctor-inner-box">
+		        <div class="doctor-profile">
+		        	<div class="doctor-img">
+		               <img src="images/team/3.jpg" alt="doctor-image" class="img-fluid w-100">
+		            </div>
+	            </div>
+                <div class="content mt-3">
+                	<h4 class="mb-0"><a href="doctor-single.html">Alexandar James</a></h4>
+                	<p>Dental</p>
+                </div> 
+	      	</div>
+      </div>
+
+      <div class="col-lg-3 col-sm-6 col-md-6 mb-4 shuffle-item" data-groups="[&quot;cat3&quot;,&quot;cat4&quot;]">
+        	<div class="position-relative doctor-inner-box">
+		        <div class="doctor-profile">
+		        	<div class="doctor-img">
+		               <img src="images/team/4.jpg" alt="doctor-image" class="img-fluid w-100">
+		            </div>
+	            </div>
+                <div class="content mt-3">
+                	<h4 class="mb-0"><a href="doctor-single.html">Edward john</a></h4>
+                	<p>Pediatry</p>
+                </div> 
+	      	</div>
+      </div>
+
+      	<div class="col-lg-3 col-sm-6 col-md-6 mb-4 shuffle-item" data-groups="[&quot;cat5&quot;]">
+        	<div class="position-relative doctor-inner-box">
+		        <div class="doctor-profile">
+		        	<div class="doctor-img">
+		               <img src="images/team/1.jpg" alt="doctor-image" class="img-fluid w-100">
+		            </div>
+	            </div>
+                <div class="content mt-3">
+                	<h4 class="mb-0"><a href="doctor-single.html">Thomas Henry</a></h4>
+                	<p>Neurology</p>
+                </div> 
+	      	</div>
+      	</div>
+
+      <div class="col-lg-3 col-sm-6 col-md-6 mb-4 shuffle-item" data-groups="[&quot;cat6&quot;]">
+       		 <div class="position-relative doctor-inner-box">
+		        <div class="doctor-profile">
+		        	<div class="doctor-img">
+		               <img src="images/team/3.jpg" alt="doctor-image" class="img-fluid w-100">
+		            </div>
+	            </div>
+                <div class="content mt-3">
+                	<h4 class="mb-0"><a href="doctor-single.html">Henry samuel</a></h4>
+                	<p>Palmology</p>
+                </div> 
+	      	</div>
+      </div>
+
+      <div class="col-lg-3 col-sm-6 col-md-6 mb-4 shuffle-item" data-groups="[&quot;cat4&quot;]">
+        	<div class="position-relative doctor-inner-box">
+		        <div class="doctor-profile">
+		        	<div class="doctor-img">
+		               <img src="images/team/1.jpg" alt="doctor-image" class="img-fluid w-100">
+		            </div>
+	            </div>
+                <div class="content mt-3">
+                	<h4 class="mb-0"><a href="doctor-single.html">Thomas alexandar</a></h4>
+                	<p>Cardiology</p>
+                </div> 
+	        </div>
+      </div>
+
+      <div class="col-lg-3 col-sm-6 col-md-6 mb-4 shuffle-item" data-groups="[&quot;cat5&quot;,&quot;cat6&quot;,&quot;cat1&quot;]">
+        	<div class="position-relative doctor-inner-box">
+		        <div class="doctor-profile">
+		        	<div class="doctor-img">
+		               <img src="images/team/3.jpg" alt="doctor-image" class="img-fluid w-100">
+		             </div>
+	             </div>
+                <div class="content mt-3">
+                	<h4 class="mb-0"><a href="doctor-single.html">HarissonThomas </a></h4>
+                	<p>Traumatology</p>
+                </div> 
+	      	</div>
+      </div>
+
+      <div class="col-lg-3 col-sm-6 col-md-6 mb-4 shuffle-item illustration" data-groups="[&quot;cat2&quot;]">
+        	<div class="position-relative doctor-inner-box">
+		        <div class="doctor-profile">
+		        	<div class="doctor-img">
+		               <img src="images/team/4.jpg" alt="doctor-image" class="img-fluid w-100">
+		            </div>
+	            </div>
+                <div class="content mt-3">
+                	<h4 class="mb-0"><a href="doctor-single.html">Jonas Thomson</a></h4>
+                	<p>Cardiology</p>
+                </div> 
+	      	</div>
+        </div>
+
+         <div class="col-lg-3 col-sm-6 col-md-6 mb-4 shuffle-item" data-groups="[&quot;cat5&quot;,&quot;cat6&quot;,&quot;cat1&quot;]">
+        	<div class="position-relative doctor-inner-box">
+		        <div class="doctor-profile">
+		        	<div class="doctor-img">
+		               <img src="images/team/3.jpg" alt="doctor-image" class="img-fluid w-100">
+		            </div>
+	            </div>
+                <div class="content mt-3">
+                	<h4 class="mb-0"><a href="doctor-single.html">Henry Forth</a></h4>
+                	<p>hematology</p>
+                </div> 
+	      	</div>
+      </div>
+
+      <div class="col-lg-3 col-sm-6 col-md-6 mb-4 shuffle-item illustration" data-groups="[&quot;cat2&quot;]">
+        	<div class="position-relative doctor-inner-box">
+		        <div class="doctor-profile">
+		        	<div class="doctor-img">
+		               <img src="images/team/4.jpg" alt="doctor-image" class="img-fluid w-100">
+		             </div>
+	             </div>
+                <div class="content mt-3">
+                	<h4 class="mb-0"><a href="doctor-single.html">Thomas Henry</a></h4>
+                	<p>Dental</p>
+                </div> 
+	      	</div>
+        </div>
+    </div>
+	<% }} %>
+  </div>
+</section>
+<!-- /portfolio -->
+
+
+
+
+
+
+
+
+
+
+
+
+user/partials/blocks/doctor-single.ejs
+
+
+
+<!-- @@include('header.htm') -->
+<%-include("partials/header")%>
+
+<!-- @@include('blocks/navigation.htm') -->
+<%-include("partials/blocks/navigation")%>
+
+<!-- @@include('blocks/page-title.htm', {
+"title": "Alexandar james",
+"description": "Doctor Details"
+}) -->
+
+
+<!-- @@include('blocks/doctor-single.htm') -->
+<section class="section doctor-single">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-4 col-md-6">
+				<div class="doctor-img-block">
+					<img src="images/team/1.jpg" alt="" class="img-fluid w-100">
+
+					<div class="info-block mt-4">
+						<h4 class="mb-0">Alexandar james</h4>
+						<p>Orthopedic Surgary</p>
+
+						<ul class="list-inline mt-4 doctor-social-links">
+							<li class="list-inline-item"><a href="#!"><i class="icofont-facebook"></i></a></li>
+							<li class="list-inline-item"><a href="#!"><i class="icofont-twitter"></i></a></li>
+							<li class="list-inline-item"><a href="#!"><i class="icofont-skype"></i></a></li>
+							<li class="list-inline-item"><a href="#!"><i class="icofont-linkedin"></i></a></li>
+							<li class="list-inline-item"><a href="#!"><i class="icofont-pinterest"></i></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-lg-8 col-md-6">
+				<div class="doctor-details mt-4 mt-lg-0">
+					<h2 class="text-md">Introducing to myself</h2>
+					<div class="divider my-4"></div>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam tempore cumque voluptate beatae quis
+						inventore sapiente nemo, a eligendi nostrum expedita veritatis neque incidunt ipsa doloribus provident ex,
+						at ullam. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam, perferendis officiis esse quae,
+						nobis eius explicabo quidem? Officia accusamus repudiandae ea esse non reiciendis accusantium voluptates,
+						facilis enim, corrupti eligendi?</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo recusandae veritatis minus optio quod
+						obcaecati laborum temporibus, deleniti vero perferendis molestias, ducimus facilis, sunt minima. Tempora,
+						amet quasi asperiores voluptas?</p>
+
+					<a href="appoinment.html" class="btn btn-main-2 btn-round-full mt-3">Make an Appoinment<i
+							class="icofont-simple-right ml-2  "></i></a>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="section doctor-qualification gray-bg">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-6">
+				<div class="section-title">
+					<h3>My Educational Qualifications</h3>
+					<div class="divider my-4"></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-lg-6 mb-4 mb-lg-0">
+				<div class="edu-block mb-5">
+					<span class="h6 text-muted">Year(2005-2007) </span>
+					<h4 class="mb-3 title-color">MBBS, M.D at University of Wyoming</h4>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi doloremque harum, mollitia, soluta maxime
+						porro veritatis fuga autem impedit corrupti aperiam sint, architecto, error nesciunt temporibus! Vel quod,
+						dolor aliquam!</p>
+				</div>
+
+				<div class="edu-block">
+					<span class="h6 text-muted">Year(2007-2009) </span>
+					<h4 class="mb-3 title-color">M.D. of Netherland Medical College</h4>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi doloremque harum, mollitia, soluta maxime
+						porro veritatis fuga autem impedit corrupti aperiam sint, architecto, error nesciunt temporibus! Vel quod,
+						dolor aliquam!</p>
+				</div>
+			</div>
+
+			<div class="col-lg-6">
+				<div class="edu-block mb-5">
+					<span class="h6 text-muted">Year(2009-2010) </span>
+					<h4 class="mb-3 title-color">MBBS, M.D at University of Japan</h4>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi doloremque harum, mollitia, soluta maxime
+						porro veritatis fuga autem impedit corrupti aperiam sint, architecto, error nesciunt temporibus! Vel quod,
+						dolor aliquam!</p>
+				</div>
+
+				<div class="edu-block">
+					<span class="h6 text-muted">Year(2010-2011) </span>
+					<h4 class="mb-3 title-color">M.D. of Canada Medical College</h4>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi doloremque harum, mollitia, soluta maxime
+						porro veritatis fuga autem impedit corrupti aperiam sint, architecto, error nesciunt temporibus! Vel quod,
+						dolor aliquam!</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+<section class="section doctor-skills">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-4">
+				<h3>My skills</h3>
+				<div class="divider my-4"></div>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In architecto voluptatem alias, aspernatur
+					voluptatibus corporis quisquam? Consequuntur, ad, doloribus, doloremque voluptatem at consectetur natus eum
+					ipsam dolorum iste laudantium tenetur.</p>
+			</div>
+			<div class="col-lg-4">
+				<div class="skill-list">
+					<h5 class="mb-4">Expertise area</h5>
+					<ul class="list-unstyled department-service">
+						<li><i class="icofont-check mr-2"></i>International Drug Database</li>
+						<li><i class="icofont-check mr-2"></i>Stretchers and Stretcher Accessories</li>
+						<li><i class="icofont-check mr-2"></i>Cushions and Mattresses</li>
+						<li><i class="icofont-check mr-2"></i>Cholesterol and lipid tests</li>
+						<li><i class="icofont-check mr-2"></i>Critical Care Medicine Specialists</li>
+						<li><i class="icofont-check mr-2"></i>Emergency Assistance</li>
+					</ul>
+				</div>
+			</div>
+			<div class="col-lg-4">
+				<div class="sidebar-widget  gray-bg p-4">
+					<h5 class="mb-4">Make Appoinment</h5>
+
+					<ul class="list-unstyled lh-35">
+						<li class="d-flex justify-content-between align-items-center">
+							<span>Monday - Friday</span>
+							<span>9:00 - 17:00</span>
+						</li>
+						<li class="d-flex justify-content-between align-items-center">
+							<span>Saturday</span>
+							<span>9:00 - 16:00</span>
+						</li>
+						<li class="d-flex justify-content-between align-items-center">
+							<span>Sunday</span>
+							<span>Closed</span>
+						</li>
+					</ul>
+
+					<div class="sidebar-contatct-info mt-4">
+						<p class="mb-0">Need Urgent Help?</p>
+						<h3 class="text-color-2">+23-4565-65768</h3>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+<!-- @@include('blocks/footer.htm') -->
+<%-include("partials/blocks/footer")%>
+
+<!-- @@include('footer.htm') -->
+<%-include("partials/footer")%>

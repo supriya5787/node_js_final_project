@@ -1,0 +1,33 @@
+<section class="section team">
+	<div class="container">
+		<div class="row justify-content-center">
+			<div class="col-lg-6">
+				<div class="section-title text-center">
+					<h2 class="mb-4">Meet Our Specialist</h2>
+					<div class="divider mx-auto my-4"></div>
+					<p>Today’s users expect effortless experiences. Don’t let essential people and processes stay stuck in the past. Speed it up, skip the hassles</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<% if(doc.length> 0 ) {
+				for(let data of doc)
+				{
+					if(data.status)
+					{
+				%>
+			<div class="col-lg-3 col-md-6 col-sm-6">
+				<div class="team-block mb-5 mb-lg-0">
+					<img src="uploads/<%-data.doc_image%>" alt="" class="img-fluid w-100">
+
+					<div class="content">
+						<h4 class="mt-4 mb-0"><a href="doctor-single.html"><%=data.doc_name%></a></h4>
+						<p><%=data.doc_dept.dept_name%></p>
+					</div>
+				</div>
+			</div>
+			<%}}}%>
+		</div>
+	</div>
+</section>

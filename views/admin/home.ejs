@@ -1,0 +1,21 @@
+
+<%-include("./common/head")%>
+    <!-- Page Content  -->
+    <div id="content" class="p-4 p-md-5 pt-5">
+      <% if (message.length> 0) { %>
+        <div class="alert alert-danger">
+          <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+          <strong>
+            <%= message %>
+          </strong>
+        </div>
+      <% } %>
+      <div>
+        <h2 class="mb-4"><%=title%></h2>
+        <p>Welcome <%=data.name%></p>
+      </div>
+    </div>
+    <h5 class="mr-3"><a href="/admin/logout">Logout</a></h5>
+  </div>
+
+  <%-include("./common/footer")%>

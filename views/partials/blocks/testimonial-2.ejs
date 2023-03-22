@@ -1,0 +1,46 @@
+<section class="section testimonial-2 gray-bg">
+	<div class="container">
+		<div class="row justify-content-center">
+			<div class="col-lg-7">
+				<div class="section-title text-center">
+					<h2>We served over 5000+ Patients</h2>
+					<div class="divider mx-auto my-4"></div>
+					<p>Lets know moreel necessitatibus dolor asperiores illum possimus sint voluptates incidunt molestias nostrum laudantium. Maiores porro cumque quaerat.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="container">
+		<div class="row align-items-center">
+			<div class="col-lg-12 testimonial-wrap-2">
+				
+				<% if(testimonialCard.length> 0) {
+					for(data of testimonialCard) {
+				%>
+
+				<div class="testimonial-block style-2  gray-bg">
+					<i class="icofont-quote-right"></i>
+
+					<div class="testimonial-thumb">
+						<img  src="/uploads/<%=data.testimonial_image %>" alt="" class="img-fluid">
+					</div>
+
+					<div class="client-info ">
+						<h4><%=data.testimonial_title %></h4>
+						<span><%=data.testimonial_name %></span>
+						<p>
+							<%=data.testimonial_content %>
+						</p>
+					</div>
+				</div>
+
+				
+				<% } } %>
+					
+				
+				
+			</div>
+		</div>
+	</div>
+</section>

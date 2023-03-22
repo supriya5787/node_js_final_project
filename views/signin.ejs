@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- head -->
+<%-include("partials/header")%>
+
+
+<body>
+    <!-- header -->
+<header class="header-area">
+    <!-- <div class="left">
+        <a href="Javascript:void(0)"><i class="fa fa-search" aria-hidden="true"></i></a>
+    </div> -->
+    <!-- <div class="right col-md-12">
+        <a href="Javascript:void(0)"><i class="fa fa-user" aria-hidden="true"></i> Chandan Halder</a>
+    </div> -->
+    <div class="container">
+        <div class="row d_flex">
+            <!-- <div class="col-sm-3 logo_sm">
+                <div class="logo">
+                    <a href="/"></a>
+                </div>
+            </div> -->
+            <div class="col-lg-12 offset-lg-1 col-md-12 col-sm-12">
+                <div class="navbar-area">
+                    <nav class="navbar navbar-expand-lg navigation" id="navbar">
+                        <div class="container">
+                            <a class="navbar-brand" href="index.html">
+                                <img src="images/logo.png" alt="" class="img-fluid">
+                            </a>
+                
+                            <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarmain"
+                                aria-controls="navbarmain" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="icofont-navigation-menu"></span>
+                            </button>
+                
+                            <div class="collapse navbar-collapse" id="navbarmain">
+                                <ul class="navbar-nav ml-auto">
+                                    <li class="nav-item active"><a class="nav-link" href="/">Home</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="/about">About</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="/service">Services</a></li>
+                
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle" href="/department" id="dropdown02" data-toggle="dropdown"
+                                            aria-haspopup="true" aria-expanded="false">Department <i class="icofont-thin-down"></i></a>
+                                        <ul class="dropdown-menu" aria-labelledby="dropdown02">
+                                            <li><a class="dropdown-item" href="/department">Departments</a></li>
+                                    
+                                            
+                                        </ul>
+                                    </li>
+                
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle" href="/doctor" id="dropdown03" data-toggle="dropdown"
+                                            aria-haspopup="true" aria-expanded="false">Doctors <i class="icofont-thin-down"></i></a>
+                                        <ul class="dropdown-menu" aria-labelledby="dropdown03">
+                                            <li><a class="dropdown-item" href="/doctor">Doctors</a></li>
+                                            <li><a class="dropdown-item" href="/appoinment">Appoinment</a></li>
+                
+                                            
+                                        </ul>
+                                    </li>
+                
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle" href="#" id="dropdown05" data-toggle="dropdown"
+                                            aria-haspopup="true" aria-expanded="false">Blog <i class="icofont-thin-down"></i></a>
+                                        <ul class="dropdown-menu" aria-labelledby="dropdown05">
+                                            <li><a class="dropdown-item" href="/blog-sidebar">Blog with Sidebar</a></li>
+                                            <li><a class="dropdown-item" href="/blog-single">Blog Single</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item"><a class="nav-link" href="/contact">Contact</a></li>
+                                    <li><a href="signup"><button class="btn btn-success">Sign Up</button></a></li>
+                                
+                                </ul>
+                            </div>
+                        </div>
+                    </nav>
+                   
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<!-- end header -->
+    <section class="vh-100" style="background-color: #508bfc;">
+        <div class="container py-5 h-100">
+            <div class="row d-flex justify-content-center align-items-center h-100">
+                <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+                    <div class="card shadow-2-strong" style="border-radius: 1rem;">
+                        <div class="card-body p-5 text-center">
+
+                            <% if (message.length > 0) { %>
+                                <div class="alert alert-danger">
+                                    <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+                                    <strong><%= message %></strong>
+                                </div>
+                            <% } %>
+
+                            <h3 class="mb-5">Sign In</h3>
+
+                            <form action="/userSignin" method="post">
+                                <div class="form-outline mb-4">
+                                    <label class="form-label" for="typeEmailX-2">Email</label>
+                                    <input type="email" name="email" value="<%=data.email%>" id="typeEmailX-2" class="form-control form-control-lg" />
+                                </div>
+
+                                <div class="form-outline mb-4">
+                                    <label class="form-label" for="typePasswordX-2">Password</label>
+                                    <input type="password" name="password" value="<%=data.password%>" id="typePasswordX-2" class="form-control form-control-lg" />
+                                </div>
+
+                                <!-- Checkbox -->
+                                <div class="form-check d-flex justify-content-start mb-4">
+                                    <input class="form-check-input" type="checkbox" name="rememberme" id="form1Example3" />
+                                    <label class="form-check-label" for="form1Example3"> Remember Me </label>
+                                </div>
+
+                                <button class="btn btn-primary btn-lg btn-block" type="submit">Sign In</button>
+                                <div class="mt-2">
+                                    <p class="mb-0">Don't have an account? <a href="signup"
+                                            class="text-dark-50 fw-bold">Sign Up</a>
+                                    </p>
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+</body>
+
+</html>

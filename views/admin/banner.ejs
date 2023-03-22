@@ -1,0 +1,218 @@
+<%-include("./common/head")%>
+    <!-- Page Content  -->
+    <div id="content" class="p-4 p-md-5 pt-5">
+        <% if (message.length> 0) { %>
+        <div class="alert alert-info">
+          <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+          <strong>
+            <%= message %>
+          </strong>
+        </div>
+      <% } %>
+        <h2 class="mb-4"><%=title%></h2>
+        <p>Welcome to <%=title%> Page</p>
+        <h3>
+            <%=data.name%>
+        </h3>
+    
+
+        <!-- BANNER -->
+        <div class="container mt-5">
+            <h3>Configure Banner</h3>
+            <a href="/admin/add_banner" class="btn btn-primary">Add-Banner</a>
+             <%if(message.length >0) {%>
+             <div class="alert alert-success">
+           <%=message%>
+             </div>
+             <%}%>
+             <table class="table mt-2">
+                 <thead>
+                   <tr>
+                     <th scope="col">Sl. no.</th>
+                     <th scope="col">Banner Image</th>
+                     <th scope="col">Banner Title</th>
+                     <th scope="col">Banner Description</th>
+                     <th colspan="2">Action</th>
+                   </tr>
+                 </thead>
+                 <tbody>
+                   <% if(bannerData.length > 0){%>
+                     <% let i=1 %>
+                   <% for(let banner of bannerData){%>        
+                   <tr>
+                     <td><%=i++%> </td>
+                     <td><img style="height: 50px ;width: 50px;"  class="img-responsive" src="/uploads/<%=banner.image%>" alt=" " /></td>
+                      
+                     <td><%= banner.title%></td>
+                     <td><%= banner.content%></td>
+                     <td><a href="/admin/editBanner/<%=banner._id%>" class="btn btn-success">Update</a></td>
+                     <td><a href="/admin/delete/<%=banner._id%>" class="btn btn-danger">Delete</a></td>          
+                   </tr>  
+                  
+                   <%} } else {%>
+                     <td colspan="5">No Data Found</td>
+                   <%} %>      
+                 </tbody>
+               </table>
+          
+            </div>
+         
+
+          <!-- BANNER CARDS -->
+          <div class="container mt-5">
+            <h3>Configure Banner</h3>
+            <a href="/admin/add_BannerCard" class="btn btn-primary">Add-Banner</a>
+             <%if(message.length >0) {%>
+             <div class="alert alert-success">
+           <%=message%>
+             </div>
+             <%}%>
+             <table class="table mt-2">
+                 <thead>
+                   <tr>
+                     <th colspan="1">Banner CardTypeOne Subtitle</th>
+                     <th colspan="1">Banner CardTypeOne Title</th>
+                     <th colspan="1">Banner CardTypeOne Description</th>
+
+                     <th colspan="1">Banner CardTypeTwo Subtitle</th>
+                     <th colspan="1">Banner CardTypeTwo Title</th>
+                     <th colspan="2">Banner CardTypeTwo Description</th>
+
+                     <th colspan="1">Banner CardTypeThree Subtitle</th>
+                     <th colspan="1">Banner CardTypeThree Title</th>
+                     <th colspan="1">Banner CardTypeThree Description</th>
+                     <th colspan="2">Action</th>
+                   </tr>
+                 </thead>
+                 <tbody>
+                  <% if(bannerCard.length > 0){%>
+                  <% for(let data of bannerCard){%>  
+              
+                    <td><%=data.subtitle_one %></td>
+                    <td><%=data.title_one %></td>
+                    <td><%=data.description_one %></td>
+                    
+                    <td><%=data.subtitle_two %></td>
+                    <td><%=data.title_two %></td>
+                    <td><%=data.description_two %></td>
+                   
+
+                    <td><a href="/admin/editBannerCard/<%=data._id%>" class="btn btn-success">Update</a></td>
+                   
+                  </tr>
+
+                  <%} } else {%>
+                    <td colspan="9">No Data Found</td>
+                  <%} %>     
+                 </tbody>
+               </table>
+          
+            </div>
+
+
+
+            <!-- AWARD WINNING CARDS-->
+            <div class="container mt-5">
+              <h3>Configure Award Winning Section</h3>
+              <a href="/admin/add_awardwinningcard" class="btn btn-primary">Add Award Winning Cards</a>
+               <%if(message.length >0) {%>
+               <div class="alert alert-success">
+             <%=message%>
+               </div>
+               <%}%>
+               <table class="table mt-2">
+                   <thead>
+                     <tr>
+                       <th colspan="1">Title</th>
+                       <th colspan="1">Content</th>
+
+                       <th colspan="2">Action</th>
+                     </tr>
+                   </thead>
+                   <tbody>
+                    <% if(awardWinningCard.length > 0){%>
+                    <% for(let card of awardWinningCard){%>  
+                
+                      <td><%=card.award_title %></td>
+                      <td><%=card.award_content %></td>
+                      
+                     
+  
+                      <td><a href="/admin/editAwardWinningCard/<%=card._id%>" class="btn btn-success">Update</a></td>
+                     
+                    </tr>
+  
+                    <%} } else {%>
+                      <td colspan="9">No Data Found</td>
+                    <%} %>     
+                   </tbody>
+                 </table>
+            
+              </div>
+         
+
+
+
+
+
+
+        <!-- TESTIMONAL -->
+        <div class="container mt-5">
+          <h3>Configure Testimonal</h3>
+          <a href="/admin/add_testimonial" class="btn btn-primary">Add-Testimonial</a>
+           <%if(message.length >0) {%>
+           <div class="alert alert-success">
+         <%=message%>
+           </div>
+           <%}%>
+           <table class="table mt-2">
+               <thead>
+                 <tr>
+                   <th scope="col">Sl. no.</th>
+                   <th scope="col">Testimonial Image</th>
+                   <th scope="col">Testimonial Title</th>
+                   <th scope="col">Testimonial Name</th>
+                   <th scope="col">Testimonial Content</th>
+                   <th colspan="2">Action</th>
+                 </tr>
+               </thead>
+               <tbody>
+                 <% if(testimonialData.length > 0){%>
+                   <% let i=1 %>
+                 <% for(let testimonial of testimonialData){%>        
+                 <tr>
+                   <td><%=i++%> </td>
+                   <td><img style="height: 50px ;width: 50px;"  class="img-responsive" src="/uploads/<%=testimonial.testimonial_image%>" alt=" " /></td>
+                    
+                   <td><%= testimonial.testimonial_title%></td>
+                   <td><%= testimonial.testimonial_name%></td>
+                   <td><%= testimonial.testimonial_content%></td>
+
+
+                   <td><a href="/admin/editTestimonial/<%=testimonial._id%>" class="btn btn-success">Update</a></td>
+
+                   <td><a href="/admin/delete/<%=testimonial._id%>" class="btn btn-danger">Delete</a></td>          
+                 </tr>  
+                
+                 <%} } else {%>
+                   <td colspan="5">No Data Found</td>
+                 <%} %>      
+               </tbody>
+             </table>
+        
+          </div>
+
+
+
+
+
+
+             
+             <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+             <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+             <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+
+
+    </div>
+
+    <%-include("./common/footer")%>

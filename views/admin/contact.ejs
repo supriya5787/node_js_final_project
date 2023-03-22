@@ -1,0 +1,90 @@
+<%-include("./common/head")%>
+  <!-- Page Content  -->
+  <div id="content" class="p-4 p-md-5 pt-5">
+    <% if (message.length> 0) { %>
+      <div class="alert alert-info">
+        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+        <strong>
+          <%= message %>
+        </strong>
+      </div>
+      <% } %>
+        <h2 class="mb-4">
+          <%=title%>
+        </h2>
+        <p>Welcome to <%=title%> Page</p>
+        <h3>
+          <%=data.name%>
+        </h3>
+
+
+        <!-- Service -->
+        <div class="container mt-5">
+          <h3>Configure Service</h3>
+          <a href="/admin/add_contact" class="btn btn-primary">Add-Contact</a>
+          <%if(message.length>0) {%>
+            <div class="alert alert-success">
+              <%=message%>
+            </div>
+            <%}%>
+              <table class="table mt-2">
+                <thead>
+                  <tr>
+
+                    <th scope="col">Sl. no.</th>
+                    <th scope="col">Icon class</th>
+                    <th scope="col">Title</th>
+                    <th scope="col">Description</th>
+                    <th colspan="2">Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <% if(contactData.length> 0){%>
+                    <% let i=1 %>
+                      <% for(let data of contactData){%>
+                        <tr>
+
+                          <td>
+                            <%=i++%>
+                          </td>
+
+                          <td>
+                            <%= data.icon_class%>
+                          </td>
+
+                          <td>
+                            <%= data.title%>
+                          </td>
+
+                          <td>
+                            <%= data.description%>
+                          </td>
+
+                          <td><a href="/admin/editContact/<%=data._id%>" class="btn btn-success">Update</a></td>
+
+                          <% if(data.status) {%>
+                            <td>
+                              <a href="/admin/deactiveContact/<%- data._id %>" class="btn
+                    btn-danger">Deactive</a>
+                            </td>
+                            <% } else{%>
+                              <td>
+                                <a href="/admin/activeContact/<%- data._id %>" class="btn btn-success">Active</a>
+                              </td>
+                              <% } %>
+
+                        </tr>
+
+                        <%} } else {%>
+                          <td colspan="5">No Data Found</td>
+                          <%} %>
+                </tbody>
+              </table>
+
+        </div>
+  </div>
+
+  <h5 class="mr-3"><a href="/admin/logout">Logout</a></h5>
+  </div>
+
+  <%-include("./common/footer")%>

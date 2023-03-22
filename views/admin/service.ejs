@@ -1,0 +1,97 @@
+<%-include("./common/head")%>
+  <!-- Page Content  -->
+  <div id="content" class="p-4 p-md-5 pt-5">
+    <% if (message.length> 0) { %>
+      <div class="alert alert-info">
+        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+        <strong>
+          <%= message %>
+        </strong>
+      </div>
+      <% } %>
+        <h2 class="mb-4">
+          <%=title%>
+        </h2>
+        <p>Welcome to <%=title%> Page</p>
+        <h3>
+          <%=data.name%>
+        </h3>
+
+
+        <!-- Service -->
+        <div class="container mt-5">
+          <h3>Configure Service</h3>
+          <a href="/admin/add_service" class="btn btn-primary">Add-Service</a>
+          <%if(message.length>0) {%>
+            <div class="alert alert-success">
+              <%=message%>
+            </div>
+            <%}%>
+              <table class="table mt-2">
+                <thead>
+                  <tr>
+
+                    <th scope="col">Sl. no.</th>
+                    <th scope="col">Image</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Description</th>
+                    <th colspan="2">Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <% if(serviceData.length> 0){%>
+                    <% let i=1 %>
+                      <% for(let data of serviceData){%>
+                        <tr>
+
+                          <td>
+                            <%=i++%>
+                          </td>
+                          <td><img style="height: 50px ;width: 50px;" class="img-responsive"
+                              src="/uploads/<%=data.image%>" alt=" " />
+                          </td>
+                          <td>
+                            <%= data.name%>
+                          </td>
+                          <td>
+                            <%= data.description%>
+                          </td>
+                          <td><a href="/admin/editService/<%=data._id%>" class="btn btn-success">Update</a></td>
+
+                          <% if(data.status) {%>
+                            <td>
+                              <a href="/admin/deactiveService/<%- data._id %>" class="btn
+                    btn-danger">Deactive</a>
+                            </td>
+                            <% } else{%>
+                              <td>
+                                <a href="/admin/activeService/<%- data._id %>" class="btn btn-success">Active</a>
+                              </td>
+                              <% } %>
+
+                        </tr>
+
+                        <%} } else {%>
+                          <td colspan="5">No Data Found</td>
+                          <%} %>
+                </tbody>
+              </table>
+
+        </div>
+
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+  <h5 class="mr-3"><a href="/admin/logout">Logout</a></h5>
+  </div>
+
+  <%-include("./common/footer")%>

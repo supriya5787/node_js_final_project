@@ -1,0 +1,106 @@
+<%-include("./common/head")%>
+    <!-- Page Content  -->
+    <div id="content" class="p-4 p-md-5 pt-5">
+        <% if (message.length> 0) { %>
+        <div class="alert alert-info">
+          <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+          <strong>
+            <%= message %>
+          </strong>
+        </div>
+      <% } %>
+        <h2 class="mb-4"><%=title%></h2>
+        <p>Welcome to <%=title%> Page</p>
+        <h3>
+            <%=data.name%>
+        </h3>
+
+
+        <!-- DOCTOR -->
+    <div class="container mt-5">
+      <h3>Configure Doctor</h3>
+      <a href="/admin/add_doctor" class="btn btn-primary">Add-Doctor</a>
+       <%if(message.length >0) {%>
+       <div class="alert alert-success">
+     <%=message%>
+       </div>
+       <%}%>
+       <table class="table mt-2">
+           <thead>
+             <tr>
+              
+               <th scope="col">Sl. no.</th>
+               <th scope="col">doc_image</th>
+               <th scope="col">doc_name</th>
+               <th scope="col">doc_dept</th>
+               <th scope="col">doc_slug</th>
+               <th scope="col">doc_intro</th>
+               <th scope="col">doc_description</th>
+               <th scope="col">doc_specialization</th>
+               <th scope="col">doc_q1</th>
+               <th scope="col">doc_q2</th>
+               <th scope="col">doc_q3</th>
+               <th scope="col">doc_q4</th>
+               <th colspan="2">Action</th>
+             </tr>
+           </thead>
+           <tbody>
+             <% if(doctorData.length > 0){%>
+               <% let i=1 %>
+             <% for(let doctor of doctorData){%>        
+             <tr>
+              
+               <td><%=i++%> </td>
+               <td><img style="height: 50px ;width: 50px;"  class="img-responsive" src="/uploads/<%=doctor.doc_image%>" alt=" " /></td>
+                
+               <td><%= doctor.doc_name%></td>
+               <td><%= doctor.doc_dept%></td>
+               <td><%= doctor.doc_slug%></td>
+               <td><%= doctor.doc_intro%></td>
+               <td><%= doctor.doc_description%></td>
+               <td><%= doctor.doc_specialization%></td>
+               <td><%= doctor.doc_q1%></td>
+               <td><%= doctor.doc_q2%></td>
+               <td><%= doctor.doc_q3%></td>
+               <td><%= doctor.doc_q4%></td>
+
+               <td><a href="/admin/editDoctor/<%=doctor._id%>" class="btn btn-success">Update</a></td>
+
+               <% if(doctor.status) {%>
+                <td>
+                    <a href=" /admin/deactivedoctor/<%- doctor._id %>" class="btn
+                    btn-danger">Deactive</a>
+                </td>
+            <% } else{%>
+                <td>
+                    <a href="/admin/activedoctor/<%- doctor._id %>"
+                        class="btn btn-success">Active</a>
+                </td>
+                <% } %>
+                        
+             </tr>  
+            
+             <%} } else {%>
+               <td colspan="5">No Data Found</td>
+             <%} %>      
+           </tbody>
+         </table>
+    
+      </div>
+
+
+    </div>
+
+
+
+
+    
+
+
+
+
+
+    <h5 class="mr-3"><a href="/admin/logout">Logout</a></h5>
+    </div>
+
+    <%-include("./common/footer")%>

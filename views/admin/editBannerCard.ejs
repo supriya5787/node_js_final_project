@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <title>Hello, world!</title>
+  </head>
+  <body>
+   <div class="container mt-5">
+    <h1>Update Banner</h1>
+    <form action="/admin/updateBannerCard" method="post">
+        <input type="hidden" name="bc_id" value="<%=bannerCardData._id%>">
+
+        <h3>Update Banner Card Types</h3>
+        <h3>Add Banner Card Types</h3>
+
+                    <h5>Add Banner Card Type One</h5>
+                    <div class="form-group">
+                    <label for="exampleInputEmail1">Subtitle:</label><br>
+                    <input type="text" class="form-control" name="subtitle_one" value="<%=bannerCardData.subtitle_one%>">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Title:</label><br>
+                        <input type="text" class="form-control" name="title_one" value="<%=bannerCardData.title_one%>">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Description:</label><br>
+                        <input type="text" class="form-control" name="description_one" value="<%=bannerCardData.description_one%>">
+                    </div>
+
+
+
+                    <h5>Add Banner Card Type Two</h5>
+                    <div class="form-group">
+                    <label for="exampleInputEmail1">Subtitle:</label><br>
+                    <input type="text" class="form-control" name="subtitle_two" value="<%=bannerCardData.subtitle_two%>">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Title:</label><br>
+                        <input type="text" class="form-control" name="title_two" value="<%=bannerCardData.title_two%>">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Description:</label><br>
+                        <input type="text" class="form-control" name="description_two" value="<%=bannerCardData.description_two%>">
+                    </div>
+
+        <button type="submit" class="btn btn-primary">update</button>
+      </form>
+   </div>
+
+    
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+  </body>
+</html>

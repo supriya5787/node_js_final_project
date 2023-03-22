@@ -1,0 +1,80 @@
+<%-include("./common/head")%>
+    <!-- Page Content  -->
+    <div id="content" class="p-4 p-md-5 pt-5">
+        <% if (message.length> 0) { %>
+        <div class="alert alert-info">
+          <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+          <strong>
+            <%= message %>
+          </strong>
+        </div>
+      <% } %>
+        <h2 class="mb-4"><%=title%></h2>
+        <p>Welcome to <%=title%> Page</p>
+        <h3>
+            <%=data.name%>
+        </h3>
+<!-- DOCTOR -->
+<div class="container mt-5">
+  <h3>Configure Department</h3>
+  <a href="/admin/add_department" class="btn btn-primary">Add-Department</a>
+   <%if(message.length >0) {%>
+   <div class="alert alert-success">
+ <%=message%>
+   </div>
+   <%}%>
+   <table class="table mt-2">
+       <thead>
+         <tr>
+          
+           <th scope="col">Sl. no.</th>
+           <th scope="col">dept_image</th>
+           <th scope="col">dept_name</th>
+           <th scope="col">dept_description</th>
+           <th scope="col">dept_mh</th>
+           <th scope="col">dept_sf</th>
+           <th colspan="2">Action</th>
+         </tr>
+       </thead>
+       <tbody>
+         <% if(departmentData.length > 0){%>
+           <% let i=1 %>
+         <% for(let department of departmentData){%>        
+         <tr>
+           <td><%=i++%> </td>
+           <td><img style="height: 50px ;width: 50px;"  class="img-responsive" src="/uploads/<%=department.dept_image%>" alt=" " /></td>
+           <td><%= department.dept_name%></td>
+           <td><%= department.dept_description%></td>
+           <td><%= department.dept_mh%></td>
+           <td><%= department.dept_sf%></td>
+
+
+           <td><a href="/admin/editDepartment/<%=department._id%>" class="btn btn-success">Update</a></td>
+          
+         </tr>  
+        
+         <%} } else {%>
+           <td colspan="5">No Data Found</td>
+         <%} %>      
+       </tbody>
+     </table>
+
+  </div>
+
+
+    </div>
+
+
+
+    <h5 class="mr-3"><a href="/admin/logout">Logout</a></h5>
+    </div>
+
+
+
+
+
+
+
+
+
+    <%-include("./common/footer")%>

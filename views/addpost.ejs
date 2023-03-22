@@ -1,0 +1,41 @@
+
+        <%-include("partials/header")%>
+   
+        <%-include("partials/blocks/navigation")%>
+        <div class="container">
+        <div class="sign-up-form">
+            <br>
+            <h1 style="font-family: LobsterTwo-Regular;">Write Your Story</h1>
+
+            
+            <form action="/addpost" method="POST" style="font-family: LobsterTwo-Regular; font-size: 1.5rem;" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Post Title</label><br>
+                    <input type="text" class="form-control" name="title" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Post Title" style="font-size: 1.2rem;">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Post Subtitle</label><br>
+                    <input type="text" class="form-control" name="subtitle" id="exampleInputPassword1" placeholder="Enter Post Sub Title" style="font-size: 1.2rem;">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Enter Post</label><br>
+                    <textarea name="content"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="">Post image:</label><br>
+                    <input type="file" class="form-control" name="image" id="exampleInputPassword1" >
+                </div>
+                <p>
+                    <button type="submit" class="btn btn-primary btn-lg btn-block mb-4" style="font-size: 1.2rem; width: 100px">Post</button>
+                </p>
+            </form>
+        </div>
+    
+        <!-- <script src="https://cdn.ckeditor.com/4.16.2/standard/ckeditor.js"></script>
+        <script>
+            CKEDITOR.replace('content');
+        </script> -->
+        <!--  footer -->
+        <%-include("partials/blocks/footer")%>
+        <%-include("partials/footer")%>
+ 

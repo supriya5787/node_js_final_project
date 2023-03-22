@@ -1,0 +1,90 @@
+<%-include("./common/head")%>
+    <!-- Page Content  -->
+    <div id="content" class="p-4 p-md-5 pt-5">
+        <% if (message.length> 0) { %>
+        <div class="alert alert-info">
+          <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+          <strong>
+            <%= message %>
+          </strong>
+        </div>
+      <% } %>
+        <h2 class="mb-4"><%=title%></h2>
+        <p>Welcome to <%=title%> Page</p>
+        <h3>
+            <%=data.name%>
+        </h3>
+
+
+        <!-- DOCTOR -->
+    <div class="container mt-5">
+      <h3>Appoinments</h3>
+    
+       <table class="table mt-2">
+           <thead>
+             <tr>
+              
+               <th scope="col">Sl. no.</th>
+               <!-- <th scope="col">app_departments</th> -->
+               <th scope="col">app_doctors</th>
+               <th scope="col">app_date</th>
+               <th scope="col">app_time</th>
+               <th scope="col">app_name</th>
+               <th scope="col">app_phone</th>
+               <th scope="col">app_message</th>
+               <th colspan="2">Action</th>
+             </tr>
+           </thead>
+           <tbody>
+             <% if(appData.length > 0){%>
+               <% let i=1 %>
+             <% for(let appoinment of appData){%>        
+             <tr>
+               <td><%=i++%> </td>
+           
+               <td><%= appoinment.app_doctors%></td>
+               <td><%= appoinment.app_date%></td>
+               <td><%= appoinment.app_time%></td>
+               <td><%= appoinment.app_name%></td>
+               <td><%= appoinment.app_phone%></td>
+               <td><%= appoinment.app_message%></td>
+              
+
+               <% if(appoinment.status) {%>
+                <td>
+                    <a href=" /admin/deactiveapp/<%-appoinment._id %>" class="btn
+                    btn-danger">Cancel Appoinment</a>
+                </td>
+            <% } else{%>
+                <td>
+                    <a href="/admin/activeapp/<%-appoinment._id %>"
+                        class="btn btn-success">Approve</a>
+                </td>
+                <% } %>
+                        
+             </tr>  
+            
+             <%} } else {%>
+               <td colspan="5">No Data Found</td>
+             <%} %>      
+           </tbody>
+         </table>
+    
+      </div>
+
+
+    </div>
+
+
+
+
+    
+
+
+
+
+
+    <h5 class="mr-3"><a href="/admin/logout">Logout</a></h5>
+    </div>
+
+    <%-include("./common/footer")%>
