@@ -70,31 +70,56 @@
              <table class="table mt-2">
                  <thead>
                    <tr>
-                     <th colspan="1">Banner CardTypeOne Subtitle</th>
-                     <th colspan="1">Banner CardTypeOne Title</th>
-                     <th colspan="1">Banner CardTypeOne Description</th>
 
-                     <th colspan="1">Banner CardTypeTwo Subtitle</th>
-                     <th colspan="1">Banner CardTypeTwo Title</th>
-                     <th colspan="2">Banner CardTypeTwo Description</th>
+                    
 
-                     <th colspan="1">Banner CardTypeThree Subtitle</th>
-                     <th colspan="1">Banner CardTypeThree Title</th>
-                     <th colspan="1">Banner CardTypeThree Description</th>
+
+                     <th colspan="1">Banner Card1 Subtitle</th>
+                     <th colspan="1">Banner Card1 Title</th>
+                     <th colspan="1">Banner Card1 Description</th>
+
+                     <th colspan="1">Banner Card2 Subtitle</th>
+                     <th colspan="1">Banner Card2 Title</th>
+                     <th colspan="1">Banner Card2 Description</th>
+
+                     <th colspan="1">Banner Card3 Subtitle</th>
+                     <th colspan="1">Banner Card3 Title</th>
+                     <th colspan="1">Banner Card3 day1</th>
+                     <th colspan="1">Banner Card3 day2</th>
+                     <th colspan="1">Banner Card3 day3</th>
+                     <th colspan="1">Banner Card3 time1</th>
+                     <th colspan="1">Banner Card3 time2</th>
+                     <th colspan="1">Banner Card3 time3</th>
+                     
                      <th colspan="2">Action</th>
                    </tr>
                  </thead>
                  <tbody>
                   <% if(bannerCard.length > 0){%>
                   <% for(let data of bannerCard){%>  
-              
+
+                    
                     <td><%=data.subtitle_one %></td>
                     <td><%=data.title_one %></td>
                     <td><%=data.description_one %></td>
                     
+                    
                     <td><%=data.subtitle_two %></td>
                     <td><%=data.title_two %></td>
                     <td><%=data.description_two %></td>
+
+                    
+                    <td><%=data.subtitle_three %></td>
+                    <td><%=data.title_three %></td>
+                    <td><%=data.day1_three%></td>
+                    <td><%=data.day2_three%></td>
+                    <td><%=data.day3_three%></td>
+                    <td><%=data.time1_three%></td>
+                    <td><%=data.time2_three%></td>
+                    <td><%=data.time3_three%></td>
+                   
+
+                  
                    
 
                     <td><a href="/admin/editBannerCard/<%=data._id%>" class="btn btn-success">Update</a></td>
@@ -123,6 +148,7 @@
                <table class="table mt-2">
                    <thead>
                      <tr>
+                      <th colspan="1">Image</th>
                        <th colspan="1">Title</th>
                        <th colspan="1">Content</th>
 
@@ -132,7 +158,8 @@
                    <tbody>
                     <% if(awardWinningCard.length > 0){%>
                     <% for(let card of awardWinningCard){%>  
-                
+                      <td><img style="height: 50px ;width: 50px;"  class="img-responsive" src="/uploads/<%=card.award_image%>" alt=" " /></td>
+                      
                       <td><%=card.award_title %></td>
                       <td><%=card.award_content %></td>
                       

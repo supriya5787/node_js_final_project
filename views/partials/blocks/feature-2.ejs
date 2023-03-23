@@ -3,37 +3,50 @@
 		<div class="row">
 			<div class="col-lg-12">
 				<div class="feature-block d-lg-flex">
+					
+
+					<% if(bannerCard.length > 0){%>
+						<% for(let data of bannerCard){%>  
 					<div class="feature-item mb-5 mb-lg-0">
 						<div class="feature-icon mb-4">
 							<i class="icofont-surgeon-alt"></i>
 						</div>
-						<span>24 Hours Service</span>
-						<h4 class="mb-3">Online Appoinment</h4>
-						<p class="mb-4">Get ALl time support for emergency.We have introduced the principle of family medicine.</p>
+						<span><%=data.subtitle_one%></span>
+						<h4 class="mb-3"><%=data.title_one%></h4>
+						<p class="mb-4"><%=data.description_one%></p>
 						<a href="/appoinment" class="btn btn-main btn-round-full">Make a appoinment</a>
 					</div>
 				
-					<div class="feature-item mb-5 mb-lg-0">
-						<div class="feature-icon mb-4">
-							<i class="icofont-ui-clock"></i>
-						</div>
-						<span>Timing schedule</span>
-						<h4 class="mb-3">Working Hours</h4>
-						<ul class="w-hours list-unstyled">
-							<li class="d-flex justify-content-between">Sun - Wed : <span>8:00 - 17:00</span></li>
-							<li class="d-flex justify-content-between">Thu - Fri : <span>9:00 - 17:00</span></li>
-							<li class="d-flex justify-content-between">Sat - sun : <span>10:00 - 17:00</span></li>
-						</ul>
-					</div>
+					
 				
 					<div class="feature-item mb-5 mb-lg-0">
 						<div class="feature-icon mb-4">
 							<i class="icofont-support"></i>
 						</div>
-						<span>Emegency Cases</span>
-						<h4 class="mb-3">1-800-700-6200</h4>
-						<p>Get ALl time support for emergency.We have introduced the principle of family medicine.Get Conneted with us for any urgency .</p>
+						<span><%=data.subtitle_two%></span>
+						<h4 class="mb-3"><%=data.title_two%></h4>
+						<p><%=data.description_two%></p>
 					</div>
+
+
+
+					<!-- subtitle_three ,title_three, day1_three ,day2_three,day3_three ,time1_three,time2_three,time3_three -->
+					<div class="feature-item mb-5 mb-lg-0">
+						<div class="feature-icon mb-4">
+							<i class="icofont-ui-clock"></i>
+						</div>
+						<span><%=data.subtitle_three%></span>
+						<h4 class="mb-3"><%=data.title_three%></h4>
+						<ul class="w-hours list-unstyled">
+							<li class="d-flex justify-content-between"><%=data.day1_three%> : <span><%=data.time1_three%></span></li>
+							<li class="d-flex justify-content-between"><%=data.day2_three%> : <span><%=data.time2_three%></span></li>
+							<li class="d-flex justify-content-between"><%=data.day3_three%> : <span><%=data.time3_three%></span></li>
+						</ul>
+					</div>
+
+					<% }} %>
+
+
 				</div>
 			</div>
 		</div>

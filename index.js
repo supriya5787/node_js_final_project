@@ -62,7 +62,7 @@ app.use("/admin", adminRoute)
 
 
 const dbcon = "mongodb+srv://shilpa:6V0At9S2pHK5v4Ox@cluster0.c1asjs8.mongodb.net/roleBasedAuth5";
-const port = 4404
+const port = 1000
 
 mongoose.connect(dbcon, { useNewUrlParser: true, useUnifiedTopology: true })
     .then(res => app.listen(port, () => console.log(`Server Running at http://localhost:${port}`)))

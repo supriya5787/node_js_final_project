@@ -3,7 +3,10 @@ const mongoose = require("mongoose")
 const Schema = mongoose.Schema;
 const bannercardsSchema = new Schema({
 
-    
+            icon_one : {
+                type: String,
+                require: true
+            },
             subtitle_one : {
                 type: String,
                 require: true
@@ -18,6 +21,10 @@ const bannercardsSchema = new Schema({
             },
 
             
+            icon_two : {
+                type: String,
+                require: true
+            },
             subtitle_two : {
                 type: String,
                 require: true
@@ -27,6 +34,44 @@ const bannercardsSchema = new Schema({
                 require: true
             },
             description_two : {
+                type: String,
+                require: true
+            },
+
+
+            icon_three : {
+                type: String,
+                require: true
+            },
+            subtitle_three : {
+                type: String,
+                require: true
+            },
+            title_three : {
+                type: String,
+                require: true
+            },
+            day1_three : {
+                type: String,
+                require: true
+            },
+            day2_three : {
+                type: String,
+                require: true
+            },
+            day3_three : {
+                type: String,
+                require: true
+            },
+            time1_three : {
+                type: String,
+                require: true
+            },
+            time2_three : {
+                type: String,
+                require: true
+            },
+            time3_three : {
                 type: String,
                 require: true
             },

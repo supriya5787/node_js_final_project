@@ -142,6 +142,16 @@ exports.bannercardcreate=(req,res)=>{
         subtitle_two: req.body.subtitle_two,
         title_two: req.body.title_two,
         description_two: req.body.description_two,
+
+        subtitle_three: req.body.subtitle_three,
+        title_three: req.body.title_three,
+        day1_three: req.body.day1_three,
+        day2_three: req.body.day2_three,
+        day3_three: req.body.day3_three,
+
+        time1_three: req.body.time1_three,
+        time2_three: req.body.time2_three,
+        time3_three: req.body.time3_three,
         
     })
     addBannerCard.save().then((result)=>{
@@ -178,6 +188,16 @@ exports.updateBannerCard=(req,res)=>{
    title_two= req.body.title_two,
    description_two=req.body.description_two,
 
+    subtitle_three= req.body.subtitle_three,
+    title_three= req.body.title_three,
+    day1_three=req.body.day1_three,
+    day2_three=req.body.day2_three,
+    day3_three=req.body.day3_three,
+    time1_three=req.body.time1_three,
+    time2_three=req.body.time2_three,
+    time3_three=req.body.time3_three,
+
+
     BannerCard.findById(bannercard_id).then((result)=>{
     result.subtitle_one = subtitle_one
     result. title_one =  title_one
@@ -186,6 +206,15 @@ exports.updateBannerCard=(req,res)=>{
     result.subtitle_two = subtitle_two
     result.title_two =  title_two
     result.description_two = description_two
+
+    result.subtitle_three = subtitle_three
+    result.title_three =  title_three
+    result.day1_three = day1_three
+    result.day2_three = day2_three
+    result.day3_three = day3_three
+    result.time1_three = time1_three
+    result.time2_three = time2_three
+    result.time3_three = time3_three
 
     return result.save().then(results=>{
         res.redirect('/admin/banner')
@@ -209,7 +238,7 @@ exports.awardwinningcardcreate=(req,res)=>{
     //console.log(req.body);
    const addAwardWinningCard= new AwardWinningCard({
         _id: req.body._id,
-        // image: req.file.filename,
+        award_image: req.file.filename,
         award_title:req.body.award_title,
         award_content:req.body.award_content,
     })
@@ -238,12 +267,12 @@ exports.editAwardWinningCard=(req,res)=>{
 exports.updateAwardWinningCard=(req,res)=>{
     
    const ac_id=req.body.ac_id
-//    const image=req.file.filename
+   const award_image=req.file.filename
    const award_title=req.body.award_title
    const award_content=req.body.award_content
 
    AwardWinningCard.findById(ac_id).then((result)=>{
-    // result.image=image
+    result.award_image=award_image
     result.award_title=award_title
     result.award_content=award_content
     return result.save().then(results=>{

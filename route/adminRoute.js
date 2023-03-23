@@ -55,9 +55,9 @@ router.post('/updateBannerCard',adminController.updateBannerCard);
 
 // AWARD WINNING CARDS ROUTES
 router.get('/add_awardwinningcard',adminController.addAwardWinningCard);
-router.post('/awardwinningcard_create',adminController.awardwinningcardcreate);
+router.post('/awardwinningcard_create',upload.single("award_image"),adminController.awardwinningcardcreate);
 router.get('/editAwardWinningCard/:id',adminController.editAwardWinningCard);
-router.post('/updateAwardWinningCard',adminController.updateAwardWinningCard);
+router.post('/updateAwardWinningCard',upload.single("award_image"),adminController.updateAwardWinningCard);
 
 // TESTIMONIAL ROUTES
 router.get('/add_testimonial',adminController.addTestimonial);

@@ -2,6 +2,10 @@ const mongoose = require("mongoose")
 
 const Schema = mongoose.Schema;
 const awardwinningSchema = new Schema({
+    award_image: {
+        type:String,
+        require: true
+    },
     award_title:{
         type:String,
         require: true

@@ -1,8 +1,10 @@
 <!-- Slider Start -->
-<section class="banner">
+<% if(bannerData.length> 0) {
+	for(data of bannerData) {
+	%>
+<section class="banner" style="background-image: url('/uploads/<%=data.image %>');">
 
-
-
+	<% } } %>
 	<div class="container">
 		<% if(bannerData.length> 0) {
 			for(data of bannerData) {
